@@ -1,0 +1,35 @@
+
+	  <div class="container">
+        <h1 class="jumbotron w3-red"><h1>ADD THE PARTY :</h1></h1><div>
+        <br> <br>
+         <div class="container">
+    <div class="row">
+    <div class="col-sm-2 w3-red" >
+    </div>
+    <div class="col-sm-8">
+        <h2>Please add the details carefully...</h2>
+        <form  [formGroup]="partyForm" (ngSubmit) = "Submit()">
+            <div class="form-group row">
+                <label>NAME: </label> 
+                <input type="text" formControlName="name" 
+                    class="form-control" id="name" placeholder="Enter Name" >
+            </div>
+            <div class="form-group row">
+                <label>PARTY: </label> 
+                <input type="text" formControlName="party" 
+                    class="form-control" id="party" placeholder="Enter Party"
+                    name="party">
+            </div>
+            <div class="form-group row">
+                <label>SYMBOL: </label> 
+                <input type="text" formControlName="symbol" 
+                    class="form-control" id="symbol" placeholder="Enter Symbol"
+                    name="symbol">
+            </div>
+            <button type="submit" class="btn btn-danger" >Submit</button>
+           
+           
+        </form>
+    </div>
+    <div class="col-sm-2 w3-red">
+    </div>
