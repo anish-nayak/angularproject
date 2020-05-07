@@ -8,6 +8,8 @@ export class LogoutService {
   constructor(private http: HttpClient) {}
 
   logout() {
+	window.localStorage.removeItem('sessionId');
+    localStorage.clear();
     return this.http
       .get<LogOutResponse>('http://localhost:8080/evs/logout')
       .toPromise();
