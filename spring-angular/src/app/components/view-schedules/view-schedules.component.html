@@ -1,0 +1,53 @@
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Upcoming Election Details</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" >Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <body>
+    <div class="container">
+      <h1 class="mt-3">Election Details</h1>
+
+      <table class="mt-3 table table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>Election ID</th>
+            <th>Name</th>
+            <th>Election Date</th>
+            <th>District</th>
+            <th>Constituency</th>
+            <th>Counting Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let election of elections">
+            <th>{{ election.electionid }}</th>
+            <th>{{ election.name }}</th>
+            <th>{{ election.electionDate }}</th>
+            <th>{{ election.district }}</th>
+            <th>{{ election.constituency }}</th>
+            <th>{{ election.countingDate }}</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <button (click)="onClick()" class="btn btn-danger">LogOut</button>
+    </div>
+  </body>
+

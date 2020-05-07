@@ -1,0 +1,99 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Voter Registeration</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" ></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<body class="text-center">
+  <form class="form-signin">
+<h3 class="h3 mb-3 font-weight-normal" ><b>Please Fill Valid Details !</b></h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="voter.firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="voter.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Date Of Birth</label>
+      <input type="date" class="form-control" id="dateOfBirth" required [(ngModel)]="voter.dateOfBirth" name="dateOfBirth">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Gender</label>
+      <input type="text" class="form-control" id="gender" required [(ngModel)]="voter.gender" name="gender">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Location</label>
+      <input type="text" class="form-control" id="location" required [(ngModel)]="voter.location" name="location">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Street</label>
+      <input type="text" class="form-control" id="street" required [(ngModel)]="voter.street" name="street">
+    </div>
+
+    <div class="form-group">
+      <label for="name">City</label>
+      <input type="text" class="form-control" id="city" required [(ngModel)]="voter.city" name="city">
+    </div>
+
+    <div class="form-group">
+      <label for="name">State</label>
+      <input type="text" class="form-control" id="mobileno" required [(ngModel)]="voter.mobileno" name="mobileno">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email Id</label>
+      <input type="text" class="form-control" id="emailid" required [(ngModel)]="voter.emailid" name="emailid">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Pincode</label>
+      <input type="number" class="form-control" id="pincode" required [(ngModel)]="voter.pincode" name="pincode">
+    </div>
+    <div class="form-group">
+      <label for="name">Set Password</label>
+      <input type="password" class="form-control" id="password" required [(ngModel)]="voter.password" name="password">
+    </div>
+   <div class="form-group">
+      <label for="name">User Id</label>
+      <input type="number" class="form-control" id="userid" required [(ngModel)]="voter.userid" name="userid">
+    </div>
+    <div class="form-group">
+      <label for="name">User Type</label>
+      <input type="number" class="form-control" id="usertype" required [(ngModel)]="voter.usertype" name="usertype">
+    </div>
+
+    <button type="submit" class="btn btn-success">Register</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <h4>Go To Login Page!</h4>
+   <button class="btn btn-success" routerLink="/login">Login</button> 
+</div>
+</form>
+</body>

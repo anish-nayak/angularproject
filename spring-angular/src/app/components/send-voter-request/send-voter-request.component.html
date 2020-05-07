@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Send Application Request</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" >Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <body>
+    <div class="container mt-5">
+      <form (submit)="onSubmit()">
+        <div class="form-group">
+          <label for="userid">User Id</label>
+          <input
+            [(ngModel)]="userid"
+            name="userid"
+            type="number"
+            class="form-control"
+            id="userid"
+            placeholder="User id"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="constituency">Constituency</label>
+          <input
+            [(ngModel)]="constituency"
+            name="constituency"
+            type="text"
+            class="form-control"
+            id="constituency"
+            placeholder="constituency"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="passedstatus">Passed Status</label>
+          <input
+            [(ngModel)]="passedstatus"
+            name="passedstatus"
+            type="number" min="1" max="3"
+            class="form-control"
+            id="passedstatus"
+            placeholder="passedstatus"
+          />
+        </div>
+
+        <div class="form-group">
+            <label for="approvedstatus">Approved Status</label>
+            <input
+              [(ngModel)]="approvedstatus"
+              name="approvedstatus"
+              type="number" min="1" max="2"
+              class="form-control"
+              id="approvedstatus"
+              placeholder="approvedstatus"
+            />
+          </div>
+  
+
+        <div class="form-group">
+          <label for="voterid">Voter ID</label>
+          <input
+            [(ngModel)]="voterid"
+            name="voterid"
+            type="text"
+            class="form-control"
+            id="voterid"
+            placeholder="voterid"
+          />
+        </div>
+
+        <button class="btn btn-primary" routerLink="/login">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

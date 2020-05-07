@@ -16,6 +16,11 @@ import { PutRequestComponent } from './components/put-request/put-request.compon
 import {ElectoralComponent} from './components/electoral/electoral.components';
 import {ResultComponent} from './components/componentresult/getAllResultsComponent';
 
+import { RegisterationComponent } from './components/registeration/registeration.component';
+import { SendVoterRequestComponent } from './components/send-voter-request/send-voter-request.component';
+import { VoterStatusComponent } from './components/voter-status/voter-status.component';
+import { ViewSchedulesComponent } from './components/view-schedules/view-schedules.component';
+
 const routes: Routes = [
   {path:'land' , component:LandingComponent},
   {path:'voter' , component:VoterComponent},
@@ -33,6 +38,11 @@ const routes: Routes = [
   { path: 'get-request', component: GetRequestComponent },
   { path: 'put-request', component: PutRequestComponent },
   {path:"updateResults",component:ResultComponent},
+  
+   {path:'register', component:RegisterationComponent},
+  {path:'voterStatus', component:VoterStatusComponent},
+  {path:'viewSchedules', component:ViewSchedulesComponent},
+  {path:'voterRequest', component:SendVoterRequestComponent},
 
   
 ];

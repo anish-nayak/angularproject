@@ -27,14 +27,18 @@ import { GetCandidateComponent } from 'src/app/components/get-candidate/get-cand
  import { AllResultService } from './components/serviceresult/getAllResultService';
  import { ResultComponent } from './components/componentresult/getAllResultsComponent';
 
-
+import { RegisterationComponent } from './components/registeration/registeration.component';
+import { SendVoterRequestComponent } from './components/send-voter-request/send-voter-request.component';
+import { VoterStatusComponent } from './components/voter-status/voter-status.component';
+import { ViewSchedulesComponent } from './components/view-schedules/view-schedules.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,LandingComponent,LoginComponent,AdminComponent,AddPartyComponent,ViewPartyComponent,GetElectionComponent,
     PostElectionComponent,ElectoralComponent,AddCandidateComponent,PutRequestComponent,GetCandidateComponent,
-    GetRequestComponent,ResultComponent,VoterComponent,
+    GetRequestComponent,ResultComponent,VoterComponent,RegisterationComponent, SendVoterRequestComponent, 
+     VoterStatusComponent, ViewSchedulesComponent,
     
   ],
   imports: [
